@@ -11,8 +11,8 @@ $black: hsl(0, 0%, 0%);
 $black-light-background: hsl(0, 0%, 75%);
 $body-font-size-p: 16px;
 $font-family: 'Kumbh Sans';
-$font-weight: 400;
-$font-weight:700;
+$font-weight1: 400;
+$font-weight2:700;
 @mixin hw {
   height:15px;
   width: 15px;
@@ -25,7 +25,8 @@ $font-weight:700;
 }
 
 body {
-  background-color: aqua;
+  background-color: $light-grayish-blue;
+  font-family: 'Kumbh Sans';
 }
 
 nav {
@@ -39,14 +40,45 @@ nav {
   div {
     display: flex;
 
-    #hamburger {
+    #hamburger #btn1{
       margin-right: 20px;
       @include hw;
+    }
+
+    #hamburger #btn2{
+      display: none;
+      z-index: 2000;
     }
 
     #logo {
       @include hw;
     }
+
+    .list {
+      position: absolute;
+      left: 0;
+      flex-direction: column;
+      border-radius: 0px 0px 0px 25px;
+      height: 100vh;
+      width: 60%;
+      background-color: $white;
+      display: none;
+      transition: transform 0.3s ease in;
+      transform: translate (100%);
+      padding-top: 7vh;
+  
+      li{
+        list-style: none;
+        padding: 3vh 0px 0px 40px;
+        font-weight: $font-weight2;
+
+
+        a {
+          text-decoration: none;
+          color: $black;
+        }
+      }
+    } 
 
     #cart {
       margin-right: 20px;
@@ -56,6 +88,106 @@ nav {
     #avatar {
       height: 20px;
       width: 25px;
+    }
+  }
+}
+
+.slideSection {
+  height: 56vh;
+  width: 100vw;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.content {
+  margin: 15px auto 30px auto;
+  width: 85%;
+
+  .info {
+  .firstP {
+    color: $Orange;
+    font-size: $body-font-size-p;
+  }
+
+  h2 {
+    color: $black;
+    margin: 10px 0px;
+  }
+
+  .secondP {
+    color: $dark-grayish-blue;
+    font-size: $body-font-size-p;
+  }
+}
+
+.payment {
+  margin: 15px 0px;
+  display: flex;
+  justify-content: space-between;
+
+  .discountPrice{
+    color: $very-dark-blue;
+    font-weight: $font-weight2;
+  }
+
+  .percentage {
+    color: $Orange;
+    background-color: $Pale-orange;
+    padding: 5px 8px;
+    border-radius: 5px;
+    font-weight: $font-weight1;
+    font-size: $body-font-size-p;
+  }
+
+  .sellingPrice{
+    color: $grayish-blue;
+    text-decoration: line-through;
+    font-weight: $font-weight1;
+  }
+}
+
+ .increDecre {
+   display: flex;
+   justify-content: space-around;
+   background-color: $black-light-background;
+   align-items: center;
+   padding: 10px 0px;
+   border-radius: 10px;
+   margin-bottom: 15px;
+
+   .decre button, .incre button{
+     color: $Orange;
+     border: none;
+     font-weight: $font-weight2;
+     background-color: inherit;
+     font-size: 20px;
+     width: 5px;
+  }
+
+  .quantity h4 {
+    font-size: $body-font-size-p;
+    color: $black;
+  }
+
+  }
+
+  .btnBox {
+    @extend .increDecre;
+    background-color: $Orange;
+    justify-content:center;
+    padding: 15px 0px;
+    box-shadow: 0px 20px 40px $Pale-orange;
+
+    #cart2 {
+      color: $white;
+      @include hw
+    }
+
+    button {
+      background-color: inherit;
+      border: none;
+      color: $white;
+      margin-left: 5px;
     }
   }
 }

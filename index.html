@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.google.com/specimen/Kumbh+Sans">
   <script defer src="app.js"></script>
   <title>E-commerce Product Page</title>
 </head>
@@ -15,12 +16,21 @@
   <nav>
     <div>
       <div id="hamburger">
-        <img src="./images/icon-menu.svg" id="btn" alt="">
+        <img src="./images/icon-menu.svg" id="btn1" alt="">
+        <img src="./images/icon-close.svg" id="btn2" alt="">
       </div>
 
       <div id="logo">
         <img src="./images/logo.svg" alt="">
       </div>
+
+      <ul class="list">
+        <li><a href="#">Collections</a></li>
+        <li><a href="#">Men</a></li>
+        <li><a href="#">Women</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
     </div>
 
     <div id="icons">
@@ -29,6 +39,46 @@
     </div>
   </nav>
 
+  <div class="slideSection">
+    <img src="images/image-product-1.jpg" alt="">
+    <img src="images/image-product-2.jpg" alt="">
+    <img src="images/image-product-3.jpg" alt="">
+    <img src="images/image-product-4.jpg" alt="">
+    <img src="" alt="">
+  </div>
+
+  <div class="content">
+
+    <div class="info">
+        <p class="firstP">SNEAKER COMPANY</p>
+        <h2>Fall Limited Edition Sneakers</h2>
+        <p class="secondP">These lo-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, thye'll withstand everything the weather can offer.</p>
+    </div>
+
+    <div class="payment">
+      <div class="discountPrice">
+        <h2>$125.00</h2>
+      </div>
+      <div class="percentage">
+        <h4>50%</h4>
+      </div>
+      <div class="sellingPrice">
+        <h3>$250.00</h3>
+      </div>
+    </div>
+
+    <div class="increDecre">
+      <div class="decre"><img src="./images/icon-minus.svg" alt=""></div>
+      <div class="quantity"><h4>0</h4></div>
+      <div class="incre"><img src="./images/icon-plus.svg" alt=""></div>
+
+    </div>
+
+    <div class="btnBox">
+      <img src="./images/icon-cart.svg" alt="" id="cart2">
+      <button>Add to cart</button>
+    </div>
+  </div>
 
 
 </body>

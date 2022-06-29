@@ -6,7 +6,8 @@
 }
 
 body {
-  background-color: aqua;
+  background-color: #f7f8fd;
+  font-family: 'Kumbh Sans';
 }
 
 nav {
@@ -29,15 +30,52 @@ nav div {
   display: flex;
 }
 
-nav div #hamburger {
+nav div #hamburger #btn1 {
   margin-right: 20px;
   height: 15px;
   width: 15px;
 }
 
+nav div #hamburger #btn2 {
+  display: none;
+  z-index: 2000;
+}
+
 nav div #logo {
   height: 15px;
   width: 15px;
+}
+
+nav div .list {
+  position: absolute;
+  left: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 0px 0px 0px 25px;
+  height: 100vh;
+  width: 60%;
+  background-color: white;
+  display: none;
+  -webkit-transition: -webkit-transform 0.3s ease in;
+  transition: -webkit-transform 0.3s ease in;
+  transition: transform 0.3s ease in;
+  transition: transform 0.3s ease in, -webkit-transform 0.3s ease in;
+  -webkit-transform: translate 100%;
+          transform: translate 100%;
+  padding-top: 7vh;
+}
+
+nav div .list li {
+  list-style: none;
+  padding: 3vh 0px 0px 40px;
+  font-weight: 700;
+}
+
+nav div .list li a {
+  text-decoration: none;
+  color: black;
 }
 
 nav div #cart {
@@ -49,5 +87,116 @@ nav div #cart {
 nav div #avatar {
   height: 20px;
   width: 25px;
+}
+
+.slideSection {
+  height: 56vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.content {
+  margin: 15px auto 30px auto;
+  width: 85%;
+}
+
+.content .info .firstP {
+  color: #ff7d1a;
+  font-size: 16px;
+}
+
+.content .info h2 {
+  color: black;
+  margin: 10px 0px;
+}
+
+.content .info .secondP {
+  color: #68707d;
+  font-size: 16px;
+}
+
+.content .payment {
+  margin: 15px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.content .payment .discountPrice {
+  color: #1d2025;
+  font-weight: 700;
+}
+
+.content .payment .percentage {
+  color: #ff7d1a;
+  background-color: #ffede0;
+  padding: 5px 8px;
+  border-radius: 5px;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.content .payment .sellingPrice {
+  color: #b6bcc8;
+  text-decoration: line-through;
+  font-weight: 400;
+}
+
+.content .increDecre, .content .btnBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: #bfbfbf;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 0px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.content .increDecre .decre button, .content .btnBox .decre button, .content .increDecre .incre button, .content .btnBox .incre button {
+  color: #ff7d1a;
+  border: none;
+  font-weight: 700;
+  background-color: inherit;
+  font-size: 20px;
+  width: 5px;
+}
+
+.content .increDecre .quantity h4, .content .btnBox .quantity h4 {
+  font-size: 16px;
+  color: black;
+}
+
+.content .btnBox {
+  background-color: #ff7d1a;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 15px 0px;
+  -webkit-box-shadow: 0px 20px 40px #ffede0;
+          box-shadow: 0px 20px 40px #ffede0;
+}
+
+.content .btnBox #cart2 {
+  color: white;
+  height: 15px;
+  width: 15px;
+}
+
+.content .btnBox button {
+  background-color: inherit;
+  border: none;
+  color: white;
+  margin-left: 5px;
 }
 /*# sourceMappingURL=style.css.map */
