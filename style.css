@@ -78,6 +78,10 @@ nav div .list li a {
   color: black;
 }
 
+nav div .list li a:hover {
+  color: #ff7d1a;
+}
+
 nav div #cart {
   margin-right: 20px;
   height: 15px;
