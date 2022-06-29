@@ -97,10 +97,46 @@ nav {
 }
 
 .slideSection {
-  height: 56vh;
-  width: 100vw;
-  display: flex;
-  margin-bottom: 20px;
+
+  #previous {
+    position: absolute;
+    flex-direction: column;
+    transition: transform 0.3s ease in;
+    transform: translate (100%);
+    top: 27vh;
+    left: 10px;
+    background-color: $white;
+    padding: 10px;
+    border-radius: 50%;
+  }
+
+  #next {
+    position: absolute;
+    flex-direction: column;
+    transition: transform 0.3s ease in;
+    transform: translate (100%);
+    top: 27vh;
+    left: 85vw;
+    background-color: $white;
+    padding: 10px;
+    border-radius: 50%;
+    
+  }
+
+  .slideImages{
+    height: 40vh;
+    display: flex;
+    margin-bottom: 20px;
+  }
+
+  .imgs {
+    width: 100%;
+  }
+
+  #product2,#product3, #product4 {
+    display: none;
+  }
+
 }
 
 .content {

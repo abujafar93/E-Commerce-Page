@@ -93,13 +93,58 @@ nav div #avatar {
   width: 25px;
 }
 
-.slideSection {
-  height: 56vh;
-  width: 100vw;
+.slideSection #previous {
+  position: absolute;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transition: -webkit-transform 0.3s ease in;
+  transition: -webkit-transform 0.3s ease in;
+  transition: transform 0.3s ease in;
+  transition: transform 0.3s ease in, -webkit-transform 0.3s ease in;
+  -webkit-transform: translate 100%;
+          transform: translate 100%;
+  top: 27vh;
+  left: 10px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.slideSection #next {
+  position: absolute;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transition: -webkit-transform 0.3s ease in;
+  transition: -webkit-transform 0.3s ease in;
+  transition: transform 0.3s ease in;
+  transition: transform 0.3s ease in, -webkit-transform 0.3s ease in;
+  -webkit-transform: translate 100%;
+          transform: translate 100%;
+  top: 27vh;
+  left: 85vw;
+  background-color: white;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.slideSection .slideImages {
+  height: 40vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 20px;
+}
+
+.slideSection .imgs {
+  width: 100%;
+}
+
+.slideSection #product2, .slideSection #product3, .slideSection #product4 {
+  display: none;
 }
 
 .content {
