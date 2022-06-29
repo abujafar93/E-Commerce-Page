@@ -11,12 +11,14 @@ hambMenu.addEventListener('click', () => {
   hambMenu.style.display = 'none';
   hambClose.style.display = 'inline';
   hambDropDownDetails.style.display = 'inline';
+  previousKey.style.display = 'none'
 })
 
 hambClose.addEventListener('click', ()=>{
   hambMenu.style.display = 'inline';
   hambClose.style.display = 'none';
   hambDropDownDetails.style.display = 'none';
+  previousKey.style.display = 'inline'
 })
 
 

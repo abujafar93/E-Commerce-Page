@@ -65,6 +65,7 @@ nav div .list {
   -webkit-transform: translate 100%;
           transform: translate 100%;
   padding-top: 7vh;
+  z-index: 1000;
 }
 
 nav div .list li {
@@ -125,10 +126,14 @@ nav div #avatar {
   -webkit-transform: translate 100%;
           transform: translate 100%;
   top: 27vh;
-  left: 85vw;
+  right: 10px;
   background-color: white;
   padding: 10px;
   border-radius: 50%;
+}
+
+.slideSection .displayImage {
+  display: none;
 }
 
 .slideSection .slideImages {
@@ -147,6 +152,10 @@ nav div #avatar {
   display: none;
 }
 
+.slideSection .thumbImages {
+  display: none;
+}
+
 .content {
   margin: 15px auto 30px auto;
   width: 85%;
@@ -155,6 +164,7 @@ nav div #avatar {
 .content .info .firstP {
   color: #ff7d1a;
   font-size: 16px;
+  font-weight: 700;
 }
 
 .content .info h2 {
@@ -247,5 +257,96 @@ nav div #avatar {
   border: none;
   color: white;
   margin-left: 5px;
+}
+
+@media screen and (min-width: 785px) {
+  nav {
+    padding: 20px 100px;
+  }
+  nav div #hamburger {
+    display: none;
+  }
+  nav div .list {
+    position: inherit;
+    height: inherit;
+    width: inherit;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding-top: inherit;
+    margin-left: 120px;
+  }
+  nav div .list li {
+    padding: inherit;
+    font-weight: 400;
+    margin: 0px 10px;
+  }
+  .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 20px auto;
+    width: 80%;
+  }
+  .container .slideSection {
+    width: 50%;
+    margin: 0 20px;
+  }
+  .container .slideSection #previous, .container .slideSection #next {
+    display: none;
+  }
+  .container .slideSection .displayImage {
+    display: inline;
+  }
+  .container .slideSection .displayImage img {
+    width: 80%;
+    height: 70%;
+    margin-bottom: 30px;
+    border-radius: 10px;
+  }
+  .container .slideSection .slideImages {
+    display: none;
+  }
+  .container .slideSection .thumbImages {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 80%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .container .slideSection .thumbImages img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+  }
+  .container .slideSection .thumbImages img:hover {
+    opacity: 0.7;
+    border: 2px solid #ff7d1a;
+  }
+  .container .content {
+    padding: 30px 40px;
+    width: 50%;
+  }
+  .container .content .payment {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (2fr)[2];
+        grid-template-columns: repeat(2, 2fr);
+    width: 40%;
+    grid-gap: 15px;
+  }
+  .container .content .buttons {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (2fr)[2];
+        grid-template-columns: repeat(2, 2fr);
+    grid-gap: 10px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

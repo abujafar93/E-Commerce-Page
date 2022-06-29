@@ -66,6 +66,7 @@ nav {
       transition: transform 0.3s ease in;
       transform: translate (100%);
       padding-top: 7vh;
+      z-index: 1000;
   
       li{
         list-style: none;
@@ -116,11 +117,15 @@ nav {
     transition: transform 0.3s ease in;
     transform: translate (100%);
     top: 27vh;
-    left: 85vw;
+    right: 10px;
     background-color: $white;
     padding: 10px;
     border-radius: 50%;
     
+  }
+
+  .displayImage {
+    display: none;
   }
 
   .slideImages{
@@ -137,6 +142,10 @@ nav {
     display: none;
   }
 
+  .thumbImages {
+    display: none;
+  }
+
 }
 
 .content {
@@ -147,6 +156,7 @@ nav {
   .firstP {
     color: $Orange;
     font-size: $body-font-size-p;
+    font-weight: $font-weight2;
   }
 
   h2 {
@@ -230,4 +240,106 @@ nav {
       margin-left: 5px;
     }
   }
+}
+
+
+@media screen and (min-width: 785px) {
+
+  nav {
+    padding: 20px 100px;
+
+    div {
+
+      #hamburger {
+        display: none;
+      }
+  
+      .list {
+        position: inherit;
+        height: inherit;
+        width: inherit;
+        display: flex;
+        flex-direction: row;
+        padding-top: inherit;
+        margin-left: 120px;
+
+        li {
+          padding: inherit;
+          font-weight: $font-weight1;
+          margin: 0px 10px;
+        }
+
+        }
+  
+
+    }
+  }
+  
+  .container {
+    display: flex;
+    margin: 20px auto;
+    width: 80%;
+    
+    .slideSection {
+      width: 50%;
+      margin: 0 20px;
+
+
+      #previous, #next {
+        display: none;
+      }
+
+      .displayImage {
+        display: inline;
+
+        img {
+          width: 80%;
+          height: 70%;
+          margin-bottom: 30px;
+          border-radius: 10px;
+        }
+      }
+
+      .slideImages {
+        display: none;
+        }
+
+      .thumbImages {
+        display: flex;
+        width: 80%;
+        justify-content: space-between;
+
+        img {
+          width: 50px;
+          height: 50px;
+          border-radius: 5px;
+        }
+
+        img:hover {
+          opacity: 0.7;
+          border: 2px solid $Orange;
+        }
+      }
+      }
+
+    .content {
+      padding: 30px 40px;
+      width: 50%;
+
+      .payment{
+          display: grid;
+          grid-template-columns: repeat(2, 2fr);
+          width: 40%;
+          grid-gap: 15px;
+      }
+
+      .buttons {
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+        grid-gap: 10px;
+      }
+      }
+
+    }
+
 }
