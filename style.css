@@ -6,13 +6,13 @@
 }
 
 body {
-  background-color: #f7f8fd;
+  background-color: white;
   font-family: 'Kumbh Sans';
 }
 
 nav {
   height: 60px;
-  background-color: white;
+  background-color: #f7f8fd;
   padding: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -48,6 +48,7 @@ nav div #logo {
 
 nav div .list {
   position: absolute;
+  top: 0;
   left: 0;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -213,7 +214,7 @@ nav div #avatar {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  background-color: #bfbfbf;
+  background-color: #f7f8fd;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -279,6 +280,7 @@ nav div #avatar {
             flex-direction: row;
     padding-top: inherit;
     margin-left: 120px;
+    background-color: inherit;
   }
   nav div .list li {
     padding: inherit;
@@ -289,24 +291,33 @@ nav div #avatar {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin: 20px auto;
+    margin: 60px auto;
     width: 80%;
+    padding: 20px;
   }
   .container .slideSection {
     width: 50%;
-    margin: 0 20px;
+    padding: 5px 0px 0px 40px;
   }
   .container .slideSection #previous, .container .slideSection #next {
     display: none;
   }
   .container .slideSection .displayImage {
     display: inline;
+    -webkit-transition: -webkit-transform 5s;
+    transition: -webkit-transform 5s;
+    transition: transform 5s;
+    transition: transform 5s, -webkit-transform 5s;
   }
   .container .slideSection .displayImage img {
-    width: 80%;
-    height: 70%;
+    width: 70%;
+    height: 60%;
     margin-bottom: 30px;
     border-radius: 10px;
+    -webkit-transition: -webkit-transform 5s;
+    transition: -webkit-transform 5s;
+    transition: transform 5s;
+    transition: transform 5s, -webkit-transform 5s;
   }
   .container .slideSection .slideImages {
     display: none;
@@ -315,7 +326,7 @@ nav div #avatar {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 80%;
+    width: 70%;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -330,7 +341,7 @@ nav div #avatar {
     border: 2px solid #ff7d1a;
   }
   .container .content {
-    padding: 30px 40px;
+    padding: 30px 0px;
     width: 50%;
   }
   .container .content .payment {
@@ -338,14 +349,14 @@ nav div #avatar {
     display: grid;
     -ms-grid-columns: (2fr)[2];
         grid-template-columns: repeat(2, 2fr);
-    width: 40%;
+    width: 30%;
     grid-gap: 15px;
   }
   .container .content .buttons {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (2fr)[2];
-        grid-template-columns: repeat(2, 2fr);
+    -ms-grid-columns: 100px 200px;
+        grid-template-columns: 100px 200px;
     grid-gap: 10px;
   }
 }
