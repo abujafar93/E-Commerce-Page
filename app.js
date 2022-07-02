@@ -63,18 +63,10 @@ thumb4.addEventListener('click', ()=>{
 // CART PRODUCT QUANTITY
 increButton.addEventListener('click', ()=>{
   let quantityDisplay = document.querySelector('.quantity h4');
-  quantityDisplay.innerHTML = 0;
- for(i=0; i <= 30; i++){
-  quantityDisplay.innerHTML = i;
-  console.log(quantityDisplay.innerHTML);
- }
+  quantityDisplay.innerHTML++;
 })
 
 decreButton.addEventListener('click', ()=>{
   let quantityDisplay = document.querySelector('.quantity h4');
-  quantityDisplay.innerHTML = 0;
- for(i; i >= 0; i--){
-  quantityDisplay.innerHTML = i;
-  console.log(quantityDisplay.innerHTML);
- }  
+  quantityDisplay.innerHTML--
 })

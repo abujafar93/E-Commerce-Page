@@ -24,29 +24,29 @@ nav {
   position: sticky;
 }
 
-nav div {
+nav #logoBox {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-nav div #hamburger #btn1 {
+nav #logoBox #hamburger #btn1 {
   margin-right: 20px;
   height: 15px;
   width: 15px;
 }
 
-nav div #hamburger #btn2 {
+nav #logoBox #hamburger #btn2 {
   display: none;
   z-index: 2000;
 }
 
-nav div #logo {
+nav #logoBox #logo {
   height: 15px;
   width: 15px;
 }
 
-nav div .list {
+nav #logoBox .list {
   position: absolute;
   top: 0;
   left: 0;
@@ -69,28 +69,28 @@ nav div .list {
   z-index: 1000;
 }
 
-nav div .list li {
+nav #logoBox .list li {
   list-style: none;
   padding: 3vh 0px 0px 40px;
   font-weight: 700;
 }
 
-nav div .list li a {
+nav #logoBox .list li a {
   text-decoration: none;
   color: black;
 }
 
-nav div .list li a:hover {
+nav #logoBox .list li a:hover {
   color: #ff7d1a;
 }
 
-nav div #cart {
+nav #icons #cart {
   margin-right: 20px;
   height: 15px;
   width: 15px;
 }
 
-nav div #avatar {
+nav #icons #avatar {
   height: 20px;
   width: 25px;
 }
